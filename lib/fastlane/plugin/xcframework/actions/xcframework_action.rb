@@ -15,6 +15,7 @@ module Fastlane
         platforms = {
           sim: 'generic/platform=iOS Simulator',
           device: 'generic/platform=iOS'
+          catalyst: 'platform=macOS,arch=x86_64,variant=Mac Catalyst'
         }
         
         # 1. Archive for each platform separately

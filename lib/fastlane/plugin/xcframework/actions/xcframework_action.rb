@@ -50,8 +50,7 @@ module Fastlane
           "| xcpretty"
         ].join(" ")
         
-        # remove the framework if it already exists
-        # FileUtils.remove_dir(#{output_path}) if File.directory?(#{output_path})
+        FileUtils.remove_dir(#{output_path}) if Dir.exist(#{output_path})
 
         sh(command)
       end

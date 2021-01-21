@@ -14,7 +14,7 @@ module Fastlane
         # TODO: Allow platforms to be configurable
         platforms = {
           sim: 'generic/platform=iOS Simulator',
-          device: 'generic/platform=iOS'
+          device: 'generic/platform=iOS',
           catalyst: 'platform=macOS,arch=x86_64,variant=Mac Catalyst'
         }
         

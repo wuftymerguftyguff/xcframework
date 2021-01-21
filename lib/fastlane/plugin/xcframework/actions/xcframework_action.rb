@@ -50,7 +50,7 @@ module Fastlane
           "| xcpretty"
         ].join(" ")
         
-        FileUtils.remove_dir(#{output_path}) if Dir.exist(#{output_path})
+        FileUtils.remove_dir(#{output_path})
 
         sh(command)
       end

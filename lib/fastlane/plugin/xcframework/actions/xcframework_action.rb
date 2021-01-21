@@ -1,4 +1,5 @@
 require 'fastlane/action'
+require 'fileutils'
 require_relative '../helper/xcframework_helper'
 
 module Fastlane
@@ -39,7 +40,8 @@ module Fastlane
         framework_flags = platforms.map do |platform, destination|
             "-framework #{build_path}/Archive/#{scheme}_#{platform.to_s}.xcarchive#{framework_path}"
         end
-        output_flag = "-output \"#{build_path}/XCFramework/#{scheme}.xcframework\""
+        output_path = "#{build_path}/XCFramework/#{scheme}.xcframework"
+        output_flag = "-output \"#{output_path}\""
   
         command = [
           "xcodebuild -create-xcframework",
